@@ -275,36 +275,34 @@
 
 /* Ejercicio Nº16 */
 
-// let numerosDesordenados = [11,3,2,15,4,6,18,19,7,10]
-// // let numerosIngresados = []
+let numerosDesordenados = [11,3,2,15,4,6,18,19,7,10]
+let numerosIngresados = []
 
-// //     for( i = 0 ; i < 5 ; i++){
-// //         numerosIngresados.push(parseInt(prompt("Ingrese 5 numeros aleatorios, que serán ordenados")))
-// //     }
-// //     alert(`Los numeros ingresados fueron ${numerosIngresados}`);
+    for( i = 0 ; i < 5 ; i++){
+        numerosIngresados.push(parseInt(prompt("Ingrese 5 numeros aleatorios, que serán ordenados")))
+    }
+    alert(`Los numeros ingresados fueron ${numerosIngresados}`);
 
-// console.log(`Lista desordenada ${numerosDesordenados}`);
-// console.log("");
-// // console.log(`Numeros ingresados desordenados: ${numerosIngresados}`);
-// // console.log("");
 
-//  function numerosPorOrdenar(ordenNumeros){
-//     const numero = ordenNumeros.length;
-//     for ( let i = 0 ; i < numero ; i++){
-//         for ( let j = 0 ; j < numero - i ; j++){
-//             if ( ordenNumeros[j] > ordenNumeros[j+1]){
-//                 let cambiarOrden = ordenNumeros[j];
-//                 ordenNumeros[j] = ordenNumeros[j+1];
-//                 ordenNumeros[j+1] = cambiarOrden;                
-//             }
-//         }
-//     }
-//     return ordenNumeros
-// }
+console.log(`Numeros ingresados desordenados: ${numerosIngresados}`);
+console.log("");
 
-// // console.log(`Numeros ingresados ordenados: ${numerosPorOrdenar(numerosIngresados)}`);
-// console.log("");
-// console.log(`Lista ordenada ${numerosPorOrdenar(numerosDesordenados)}`);
+ function numerosPorOrdenar(ordenNumeros){
+    const numero = ordenNumeros.length;
+    for ( let i = 0 ; i < numero ; i++){
+        for ( let j = 0 ; j < numero - i ; j++){
+            if ( ordenNumeros[j] > ordenNumeros[j+1]){
+                let cambiarOrden = ordenNumeros[j];
+                ordenNumeros[j] = ordenNumeros[j+1];
+                ordenNumeros[j+1] = cambiarOrden;                
+            }
+        }
+    }
+    return ordenNumeros
+}
+
+// console.log(`Numeros ingresados ordenados: ${numerosPorOrdenar(numerosIngresados)}`);
+
 
 /* Segunda solucion encontrada (No la hice yo) */
 
@@ -313,8 +311,8 @@
 
 //     for( let i = 0 ; i < 10 ; i++){
 //         const minimo = Math.min(...numerosDesordenados)
+//         console.log(minimo)
 //         numerosPorOrdenar.push(minimo)
 //         numerosDesordenados.splice(numerosDesordenados.indexOf(minimo), 1)
 //     }
 //     console.log(numerosPorOrdenar)
-
